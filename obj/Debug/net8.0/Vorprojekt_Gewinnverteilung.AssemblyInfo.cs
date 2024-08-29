@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vorprojekt_Gewinnverteilung")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cf6bd4075c969c4a573cae9e5a12f5f6497809be")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3563a16b19297b0f951d4e11033ea206e670e3c9")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vorprojekt_Gewinnverteilung")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vorprojekt_Gewinnverteilung")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
