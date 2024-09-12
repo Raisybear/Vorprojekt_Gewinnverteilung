@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\da407\\source\\repos\\Vorprojekt_Gewinnverteilung\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F011878B-BE60-4A58-A2E7-7F0E117050FA}|Vorprojekt_Gewinnverteilung.csproj|c:\\users\\da407\\source\\repos\\vorprojekt_gewinnverteilung\\calculations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F011878B-BE60-4A58-A2E7-7F0E117050FA}|Vorprojekt_Gewinnverteilung.csproj|solutionrelative:calculations.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F011878B-BE60-4A58-A2E7-7F0E117050FA}|Vorprojekt_Gewinnverteilung.csproj|c:\\users\\da407\\source\\repos\\vorprojekt_gewinnverteilung\\menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F011878B-BE60-4A58-A2E7-7F0E117050FA}|Vorprojekt_Gewinnverteilung.csproj|solutionrelative:menu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F011878B-BE60-4A58-A2E7-7F0E117050FA}|Vorprojekt_Gewinnverteilung.csproj|c:\\users\\da407\\source\\repos\\vorprojekt_gewinnverteilung\\inputs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F011878B-BE60-4A58-A2E7-7F0E117050FA}|Vorprojekt_Gewinnverteilung.csproj|solutionrelative:inputs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F011878B-BE60-4A58-A2E7-7F0E117050FA}|Vorprojekt_Gewinnverteilung.csproj|c:\\users\\da407\\source\\repos\\vorprojekt_gewinnverteilung\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F011878B-BE60-4A58-A2E7-7F0E117050FA}|Vorprojekt_Gewinnverteilung.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F011878B-BE60-4A58-A2E7-7F0E117050FA}|Vorprojekt_Gewinnverteilung.csproj|c:\\users\\da407\\source\\repos\\vorprojekt_gewinnverteilung\\vorprojekt_gewinnverteilung.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{F011878B-BE60-4A58-A2E7-7F0E117050FA}|Vorprojekt_Gewinnverteilung.csproj|solutionrelative:vorprojekt_gewinnverteilung.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Calculations.cs",
+              "DocumentMoniker": "C:\\Users\\da407\\source\\repos\\Vorprojekt_Gewinnverteilung\\Calculations.cs",
+              "RelativeDocumentMoniker": "Calculations.cs",
+              "ToolTip": "C:\\Users\\da407\\source\\repos\\Vorprojekt_Gewinnverteilung\\Calculations.cs",
+              "RelativeToolTip": "Calculations.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAnAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T05:48:02.526Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Inputs.cs",
+              "DocumentMoniker": "C:\\Users\\da407\\source\\repos\\Vorprojekt_Gewinnverteilung\\Inputs.cs",
+              "RelativeDocumentMoniker": "Inputs.cs",
+              "ToolTip": "C:\\Users\\da407\\source\\repos\\Vorprojekt_Gewinnverteilung\\Inputs.cs",
+              "RelativeToolTip": "Inputs.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T05:48:00.312Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Menu.cs",
+              "DocumentMoniker": "C:\\Users\\da407\\source\\repos\\Vorprojekt_Gewinnverteilung\\Menu.cs",
+              "RelativeDocumentMoniker": "Menu.cs",
+              "ToolTip": "C:\\Users\\da407\\source\\repos\\Vorprojekt_Gewinnverteilung\\Menu.cs",
+              "RelativeToolTip": "Menu.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T05:47:57.768Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\da407\\source\\repos\\Vorprojekt_Gewinnverteilung\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\da407\\source\\repos\\Vorprojekt_Gewinnverteilung\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-12T05:47:54.615Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Vorprojekt_Gewinnverteilung",
+              "DocumentMoniker": "C:\\Users\\da407\\Source\\Repos\\Vorprojekt_Gewinnverteilung\\Vorprojekt_Gewinnverteilung.csproj",
+              "RelativeDocumentMoniker": "Vorprojekt_Gewinnverteilung.csproj",
+              "ToolTip": "C:\\Users\\da407\\Source\\Repos\\Vorprojekt_Gewinnverteilung\\Vorprojekt_Gewinnverteilung.csproj",
+              "RelativeToolTip": "Vorprojekt_Gewinnverteilung.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2024-09-12T05:47:42.617Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

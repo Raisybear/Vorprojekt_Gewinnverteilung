@@ -10,8 +10,9 @@
         private int verlustvortrag;
         private int dividende;
 
-        public Calculations(int jahresGewinn, int aktien, int partizipationskapital, int gesetzlicheReserven, int gewinnvortrag, int verlustvortrag, int dividende)
+        public Calculations(Menu menu, int jahresGewinn, int aktien, int partizipationskapital, int gesetzlicheReserven, int gewinnvortrag, int verlustvortrag, int dividende)
         {
+            this.menu = menu;
             this.jahresGewinn = jahresGewinn;
             this.aktien = aktien;
             this.partizipationskapital = partizipationskapital;
@@ -58,6 +59,7 @@
                 Console.WriteLine("Nicht genug Gewinn vorhanden, um die gewünschte Dividende auszuschütten.");
                 dividende = verbleibenderGewinn; 
                 Console.WriteLine($"Es wird eine reduzierte Dividende von {dividende} ausgeschüttet.");
+
                 verbleibenderGewinn = 0;
             }
             

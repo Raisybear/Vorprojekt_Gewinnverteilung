@@ -8,13 +8,13 @@
 
     public void GesetzlicheReservenCalculations(int jahresGewinn, int aktien, int partizipationskapital, int gesetzlicheReserven, int gewinnvortrag, int verlustvortrag, int dividende)
     {
-        Calculations calculations = new Calculations(jahresGewinn, aktien, partizipationskapital, gesetzlicheReserven, gewinnvortrag, verlustvortrag, dividende);
+        Calculations calculations = new Calculations(this, jahresGewinn, aktien, partizipationskapital, gesetzlicheReserven, gewinnvortrag, verlustvortrag, dividende); 
         calculations.CalculategesetzlicheReserve();
     }
-    
+
     public void DividendenCalculations(int jahresGewinn, int aktien, int partizipationskapital, int gesetzlicheReserven, int gewinnvortrag, int verlustvortrag, int dividende)
     {
-        Calculations calculations = new Calculations(jahresGewinn, aktien, partizipationskapital, gesetzlicheReserven, gewinnvortrag, verlustvortrag, dividende);
+        Calculations calculations = new Calculations(this, jahresGewinn, aktien, partizipationskapital, gesetzlicheReserven, gewinnvortrag, verlustvortrag, dividende);
         calculations.CalculateDividende();
     }
 }
