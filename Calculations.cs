@@ -62,5 +62,25 @@
             }
             
             Console.WriteLine($"Verbleibender Gewinn nach Dividendenzahlung: {verbleibenderGewinn}");
-        } 
+            
+            CalculateGewinnOderVerlustVortrag(verbleibenderGewinn);
+        }
+        
+        public void CalculateGewinnOderVerlustVortrag(int verbleibenderGewinn)
+        {
+            if (verbleibenderGewinn > 0)
+            {
+                gewinnvortrag += verbleibenderGewinn;
+                Console.WriteLine($"Gewinnvortrag für die nächste Periode: {gewinnvortrag}");
+            }
+            else if (verbleibenderGewinn < 0)
+            {
+                verlustvortrag += Math.Abs(verbleibenderGewinn);
+                Console.WriteLine($"Verlustvortrag für die nächste Periode: {verlustvortrag}");
+            }
+            else
+            {
+                Console.WriteLine("Kein Gewinn oder Verlust für die nächste Periode.");
+            }
+        }
     }
