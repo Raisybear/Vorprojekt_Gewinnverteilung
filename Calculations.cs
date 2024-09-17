@@ -1,88 +1,118 @@
-﻿    public class Calculations
+﻿public class Calculations
+{
+    private Menu menu;
+
+    private int beitragZurGesetzlichenReserve;
+
+    public int JahresGewinn { get; private set; }
+    public int Aktien { get; private set; }
+    public int Partizipationskapital { get; private set; }
+    public int GesetzlicheReserven { get; private set; }
+    public int Gewinnvortrag { get; private set; }
+    public int Verlustvortrag { get; private set; }
+    public int Dividende { get; private set; }
+
+    public Calculations(Menu menu, int jahresGewinn, int aktien, int partizipationskapital, int gesetzlicheReserven, int gewinnvortrag, int verlustvortrag, int dividende)
     {
-        private Menu menu;
-        
-        private int jahresGewinn;
-        private int aktien;
-        private int partizipationskapital;
-        private int gesetzlicheReserven;
-        private int gewinnvortrag;
-        private int verlustvortrag;
-        private int dividende;
-
-        public Calculations(Menu menu, int jahresGewinn, int aktien, int partizipationskapital, int gesetzlicheReserven, int gewinnvortrag, int verlustvortrag, int dividende)
-        {
-            this.menu = menu;
-            this.jahresGewinn = jahresGewinn;
-            this.aktien = aktien;
-            this.partizipationskapital = partizipationskapital;
-            this.gesetzlicheReserven = gesetzlicheReserven;
-            this.gewinnvortrag = gewinnvortrag;
-            this.verlustvortrag = verlustvortrag;
-            this.dividende = dividende;
-        }
-        
-        public void CalculategesetzlicheReserve()
-        {
-            Console.WriteLine("Nun werden deine Eingaben verarbeitet und berechnet.");
-            
-            int zielReserve = (int)((aktien + partizipationskapital) * 0.2);
-            
-            int beitragZurGesetzlichenReserve = 0;
-            if (gesetzlicheReserven < zielReserve)
-            {
-                beitragZurGesetzlichenReserve = (int)(jahresGewinn * 0.05);
-                
-                if (gesetzlicheReserven + beitragZurGesetzlichenReserve > zielReserve)
-                {
-                    beitragZurGesetzlichenReserve = zielReserve - gesetzlicheReserven;
-                }
-            }
-            
-            Console.WriteLine($"Beitrag zur gesetzlichen Reserve: {beitragZurGesetzlichenReserve}");
-            Console.WriteLine($"Neue gesetzliche Reserve: {gesetzlicheReserven + beitragZurGesetzlichenReserve}");
-            
-            menu.DividendenCalculations(jahresGewinn, aktien, partizipationskapital, gesetzlicheReserven, gewinnvortrag, verlustvortrag, dividende);
-        }
-        
-        public void CalculateDividende()
-        {
-            int verbleibenderGewinn = jahresGewinn - (gesetzlicheReserven - (int)((aktien + partizipationskapital) * 0.2));
-     
-            if (verbleibenderGewinn >= dividende)
-            {
-                Console.WriteLine($"Dividende in Höhe von {dividende} kann ausgeschüttet werden.");
-                verbleibenderGewinn -= dividende; 
-            }
-            else
-            {
-                Console.WriteLine("Nicht genug Gewinn vorhanden, um die gewünschte Dividende auszuschütten.");
-                dividende = verbleibenderGewinn; 
-                Console.WriteLine($"Es wird eine reduzierte Dividende von {dividende} ausgeschüttet.");
-
-                verbleibenderGewinn = 0;
-            }
-            
-            Console.WriteLine($"Verbleibender Gewinn nach Dividendenzahlung: {verbleibenderGewinn}");
-            
-            CalculateGewinnOderVerlustVortrag(verbleibenderGewinn);
-        }
-        
-        public void CalculateGewinnOderVerlustVortrag(int verbleibenderGewinn)
-        {
-            if (verbleibenderGewinn > 0)
-            {
-                gewinnvortrag += verbleibenderGewinn;
-                Console.WriteLine($"Gewinnvortrag für die nächste Periode: {gewinnvortrag}");
-            }
-            else if (verbleibenderGewinn < 0)
-            {
-                verlustvortrag += Math.Abs(verbleibenderGewinn);
-                Console.WriteLine($"Verlustvortrag für die nächste Periode: {verlustvortrag}");
-            }
-            else
-            {
-                Console.WriteLine("Kein Gewinn oder Verlust für die nächste Periode.");
-            }
-        }
+        this.menu = menu;
+        JahresGewinn = jahresGewinn;
+        Aktien = aktien;
+        Partizipationskapital = partizipationskapital;
+        GesetzlicheReserven = gesetzlicheReserven;
+        Gewinnvortrag = gewinnvortrag;
+        Verlustvortrag = verlustvortrag;
+        Dividende = dividende;
     }
+
+    public void CalculateGesetzlicheReserve()
+    {
+        int zielReserve = (int)((Aktien + Partizipationskapital) * 0.2);
+        beitragZurGesetzlichenReserve = 0;
+
+        if (GesetzlicheReserven < zielReserve)
+        {
+            beitragZurGesetzlichenReserve = (int)(JahresGewinn * 0.05);
+
+            if (GesetzlicheReserven + beitragZurGesetzlichenReserve > zielReserve)
+            {
+                beitragZurGesetzlichenReserve = zielReserve - GesetzlicheReserven;
+            }
+        }
+
+        CalculateDividende();
+    }
+
+    public void CalculateDividende()
+    {
+        int verbleibenderGewinn = JahresGewinn - beitragZurGesetzlichenReserve;
+
+        if (verbleibenderGewinn >= Dividende)
+        {
+            verbleibenderGewinn -= Dividende;
+        }
+        else
+        {
+            Dividende = verbleibenderGewinn;
+            verbleibenderGewinn = 0;
+        }
+
+        CalculateGewinnOderVerlustVortrag(verbleibenderGewinn);
+    }
+
+    public void CalculateGewinnOderVerlustVortrag(int verbleibenderGewinn)
+    {
+        if (verbleibenderGewinn > 0)
+        {
+            Gewinnvortrag += verbleibenderGewinn;
+        }
+        else if (verbleibenderGewinn < 0)
+        {
+            Verlustvortrag += Math.Abs(verbleibenderGewinn);
+        }
+
+        PrintFinalSummary();
+    }
+
+    public void PrintFinalSummary()
+    {
+        Console.WriteLine("\n-----------------------------------");
+        Console.WriteLine("       Endergebnis der Berechnungen");
+        Console.WriteLine("-----------------------------------\n");
+
+        Console.WriteLine($"Beitrag zur gesetzlichen Reserve: {beitragZurGesetzlichenReserve} CHF");
+        Console.WriteLine("(Die gesetzlichen Reserven müssen erst aufgefüllt werden, wenn sie unter 20 % des Aktienkapitals liegen. Da dies bereits erfüllt ist, wird kein weiterer Beitrag geleistet.)\n");
+        Console.WriteLine($"Neue gesetzliche Reserve: {GesetzlicheReserven + beitragZurGesetzlichenReserve} CHF");
+        Console.WriteLine("(Dies ist der Gesamtbetrag, den das Unternehmen als gesetzliche Reserve hält, nachdem alle Berechnungen abgeschlossen sind.)\n");
+
+        if (Dividende > 0)
+        {
+            Console.WriteLine($"Die Dividende in Höhe von {Dividende} CHF wurde ausgeschüttet.");
+        }
+        else
+        {
+            Console.WriteLine("Es war nicht genug Gewinn vorhanden, um eine Dividende auszuschütten.");
+        }
+
+        Console.WriteLine($"Verbleibender Gewinn nach Dividendenzahlung: {JahresGewinn - beitragZurGesetzlichenReserve - Dividende} CHF");
+        Console.WriteLine("(Dies ist der Betrag, der nach der Auszahlung der Dividende übrig geblieben ist.)\n");
+
+        if (Gewinnvortrag > 0)
+        {
+            Console.WriteLine($"Gewinnvortrag für die nächste Periode: {Gewinnvortrag} CHF");
+            Console.WriteLine("(Dieser Betrag wird in das nächste Geschäftsjahr übertragen und kann in der Zukunft verwendet werden.)\n");
+        }
+        else if (Verlustvortrag > 0)
+        {
+            Console.WriteLine($"Verlustvortrag für die nächste Periode: {Verlustvortrag} CHF");
+            Console.WriteLine("(Dieser Verlust wird in das nächste Geschäftsjahr übertragen und muss in der Zukunft ausgeglichen werden.)\n");
+        }
+        else
+        {
+            Console.WriteLine("Kein Gewinn oder Verlust für die nächste Periode.");
+        }
+
+        Console.WriteLine("\n-----------------------------------");
+        Console.WriteLine("        Berechnungen abgeschlossen");
+        Console.WriteLine("-----------------------------------");
+    }
+}

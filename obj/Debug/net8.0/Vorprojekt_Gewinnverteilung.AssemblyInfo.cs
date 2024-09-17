@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Vorprojekt_Gewinnverteilung")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae000efcbbb729ea0d1f4978971f45f880b1e1cd")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5c307fdbd8f0ed1a25089ea0a55a47d78d870d82")]
 [assembly: System.Reflection.AssemblyProductAttribute("Vorprojekt_Gewinnverteilung")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Vorprojekt_Gewinnverteilung")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
