@@ -23,7 +23,7 @@
             jahresGewinn = ReadIntInput();
             Console.Clear();
 
-            Console.WriteLine("Bitte geben Sie Aktienkapital ein: ");
+            Console.WriteLine("Bitte geben Sie das Aktienkapital ein: ");
             aktien = ReadIntInput();
             Console.Clear();
 
