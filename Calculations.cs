@@ -74,45 +74,55 @@
     }
 
     public void PrintFinalSummary()
+{
+    Console.WriteLine("\n-----------------------------------");
+    Console.WriteLine("       Endergebnis der Berechnungen");
+    Console.WriteLine("-----------------------------------\n");
+
+    Console.WriteLine($"Beitrag zur gesetzlichen Reserve: {beitragZurGesetzlichenReserve} CHF");
+    Console.WriteLine("(Die gesetzlichen Reserven müssen erst aufgefüllt werden, wenn sie unter 20 % des Aktienkapitals liegen. Da dies bereits erfüllt ist, wird kein weiterer Beitrag geleistet.)\n");
+    Console.WriteLine($"Neue gesetzliche Reserve: {GesetzlicheReserven + beitragZurGesetzlichenReserve} CHF");
+    Console.WriteLine("(Dies ist der Gesamtbetrag, den das Unternehmen als gesetzliche Reserve hält, nachdem alle Berechnungen abgeschlossen sind.)\n");
+
+    if (Dividende > 0)
     {
-        Console.WriteLine("\n-----------------------------------");
-        Console.WriteLine("       Endergebnis der Berechnungen");
-        Console.WriteLine("-----------------------------------\n");
-
-        Console.WriteLine($"Beitrag zur gesetzlichen Reserve: {beitragZurGesetzlichenReserve} CHF");
-        Console.WriteLine("(Die gesetzlichen Reserven müssen erst aufgefüllt werden, wenn sie unter 20 % des Aktienkapitals liegen. Da dies bereits erfüllt ist, wird kein weiterer Beitrag geleistet.)\n");
-        Console.WriteLine($"Neue gesetzliche Reserve: {GesetzlicheReserven + beitragZurGesetzlichenReserve} CHF");
-        Console.WriteLine("(Dies ist der Gesamtbetrag, den das Unternehmen als gesetzliche Reserve hält, nachdem alle Berechnungen abgeschlossen sind.)\n");
-
-        if (Dividende > 0)
-        {
-            Console.WriteLine($"Die Dividende in Höhe von {Dividende} CHF wurde ausgeschüttet.");
-        }
-        else
-        {
-            Console.WriteLine("Es war nicht genug Gewinn vorhanden, um eine Dividende auszuschütten.");
-        }
-
-        Console.WriteLine($"Verbleibender Gewinn nach Dividendenzahlung: {JahresGewinn - beitragZurGesetzlichenReserve - Dividende} CHF");
-        Console.WriteLine("(Dies ist der Betrag, der nach der Auszahlung der Dividende übrig geblieben ist.)\n");
-
-        if (Gewinnvortrag > 0)
-        {
-            Console.WriteLine($"Gewinnvortrag für die nächste Periode: {Gewinnvortrag} CHF");
-            Console.WriteLine("(Dieser Betrag wird in das nächste Geschäftsjahr übertragen und kann in der Zukunft verwendet werden.)\n");
-        }
-        else if (Verlustvortrag > 0)
-        {
-            Console.WriteLine($"Verlustvortrag für die nächste Periode: {Verlustvortrag} CHF");
-            Console.WriteLine("(Dieser Verlust wird in das nächste Geschäftsjahr übertragen und muss in der Zukunft ausgeglichen werden.)\n");
-        }
-        else
-        {
-            Console.WriteLine("Kein Gewinn oder Verlust für die nächste Periode.");
-        }
-
-        Console.WriteLine("\n-----------------------------------");
-        Console.WriteLine("        Berechnungen abgeschlossen");
-        Console.WriteLine("-----------------------------------");
+        Console.WriteLine($"Die Dividende in Höhe von {Dividende} CHF wurde ausgeschüttet.");
     }
+    else
+    {
+        Console.WriteLine("Es war nicht genug Gewinn vorhanden, um eine Dividende auszuschütten.");
+    }
+
+    Console.WriteLine($"Verbleibender Gewinn nach Dividendenzahlung: {JahresGewinn - beitragZurGesetzlichenReserve - Dividende} CHF");
+    Console.WriteLine("(Dies ist der Betrag, der nach der Auszahlung der Dividende übrig geblieben ist.)\n");
+
+    if (Gewinnvortrag > 0)
+    {
+        Console.WriteLine($"Gewinnvortrag für die nächste Periode: {Gewinnvortrag} CHF");
+        Console.WriteLine("(Dieser Betrag wird in das nächste Geschäftsjahr übertragen und kann in der Zukunft verwendet werden.)\n");
+    }
+    else if (Verlustvortrag > 0)
+    {
+        Console.WriteLine($"Verlustvortrag für die nächste Periode: {Verlustvortrag} CHF");
+        Console.WriteLine("(Dieser Verlust wird in das nächste Geschäftsjahr übertragen und muss in der Zukunft ausgeglichen werden.)\n");
+    }
+    else
+    {
+        Console.WriteLine("Kein Gewinn oder Verlust für die nächste Periode.");
+    }
+
+    Console.WriteLine("\n-----------------------------------");
+    Console.WriteLine("        Berechnungen abgeschlossen");
+    Console.WriteLine("-----------------------------------");
+
+    // Aufforderung zum Beenden der Anwendung
+    Console.WriteLine("\nBitte geben Sie 'exit' ein, um das Programm zu beenden.");
+    
+    string input = "";
+    while (input.ToLower() != "exit")
+    {
+        input = Console.ReadLine();
+    }
+}
+
 }
